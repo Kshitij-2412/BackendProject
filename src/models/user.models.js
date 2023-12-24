@@ -49,7 +49,6 @@ const userSchema = new Schema(
   { timestamps: true }
 );
 
-
 //pre hook : database mein save krne se just pehle kch code run krdo
 userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) return next();
